@@ -21,3 +21,6 @@
 
     here a is range , there are several ways where we can define range - 
         * range ( 1 , 100 , 1) this means range is starting from 1 and ending till 99 one before the last number entered and the last 1 means spacing . we can coustomize all of this 
+
+8 ) FFunctions - define a function which is to be used over and over  . To define function we use def name(): # here we can give at any name  . After ccreating a function we need to call it , here we can call it by name() .
+
