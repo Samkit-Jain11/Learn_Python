@@ -102,7 +102,37 @@ while not game_over:
 # game_over = True : this will break the loop 
 '''
 '''
-part 4 - add number of attempts used 
+# part 4 - add number of attempts used 
+
+import random 
+print("Welcome to the hangman challenge ! ")
+
+word = ['chatgpt' , 'nvidia' , 'oracle' , 'nestle']
+secret_word = random.choice(word)
+
+game_over = False 
+guessess = []
+attempt = 0
+
+while not game_over:
+    empty = []
+    guess = input("Enter an alphabet")
+    guessess += guess # this so we can store the guess made by user somewhere it cant get tempered 
+    attempt += 1
+    for letter in secret_word:
+        if letter in guessess :
+            empty += letter
+            
+        else : 
+            empty += "_"
+             
+    
+    print(empty)
+
+    if "_" not in empty:
+        print("Game over , you win ")
+        print (f"Attempt used {attempt}")
+        game_over = True
 '''
 '''
 part 5 - add fied numeber of attempts 
