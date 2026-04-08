@@ -134,6 +134,43 @@ while not game_over:
         print (f"Attempt used {attempt}")
         game_over = True
 '''
-'''
-part 5 - add fied numeber of attempts 
-'''
+
+# part 5 - add fixed numeber of attempts if exceed then break the game say game over you loose 
+
+import random 
+print("Welcome to the hangman challenge !")
+
+attempt = [ 4 , 5 , 6 , 7 , 8] 
+max_attempt = random.choice(attempt)
+print(f"You have {max_attempt} try to guess . ")
+
+word = ['chatgpt' , 'nvidia' , 'oracle' , 'nestle']
+secret_word = random.choice(word)
+
+guessess = []
+game_over = False 
+
+tried_attempt  = 0 
+
+while not game_over:
+    empty = []
+    
+
+    if tried_attempt < max_attempt:
+        guess = input("Enter an alphabet : ")
+        tried_attempt += 1
+        guessess += guess 
+       
+        for letter in secret_word:
+            if letter in guessess:
+                empty += letter
+            else:
+                empty += "_"
+        print(empty)
+    else :
+        print("Game over you loose")
+        break
+
+    if "_" not in empty:
+        print("Game over you win ")
+        game_over = True
