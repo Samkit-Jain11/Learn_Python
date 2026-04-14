@@ -27,8 +27,11 @@
         while condition :
                 # condition can be according to your problem
                 write the work here 
-
-8 ) Functions - define a function which is to be used over and over  . To define function we use def name(): # here we can give at any name  . After ccreating a function we need to call it , here we can call it by name() .
+++
+8 ) Functions - define a function which is to be used over and over  . To define function we use 
+                def name(): # here we can give at any name  . After ccreating a function we need to call it , here we can call it by name() .
+                Ex - 
+                def attack(ip,url) here ip and url are parameters 
 
 9 ) Empty list = []
 
